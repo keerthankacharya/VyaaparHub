@@ -1,0 +1,116 @@
+.login_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding-top: 0;
+}
+
+.form_container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-top: -80px;
+  margin-bottom: 0;
+}
+
+.logo_container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.input_container {
+  margin-bottom: 15px;
+  text-align: left;
+  padding-top: auto;
+}
+
+.input_label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input_field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.password_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password_input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.show_password_btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.forgot_password {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot_password a {
+  color: #16a34a;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot_password a:hover {
+  text-decoration: underline;
+}
+
+.sign_in_btn {
+  width: 100%;
+  background-color: #16a34a;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sign_in_btn:hover {
+  background-color: #128c3e;
+}
