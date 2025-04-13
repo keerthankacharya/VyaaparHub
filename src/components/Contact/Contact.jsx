@@ -1,10 +1,11 @@
 import React from 'react'
+import Logo from "../../images/logo.png";
 
 export default function Contact() {
     return (
         <>
         <h1 className='text-5xl text-center p-5'>Contact Us</h1>
-        <div className="flex items-center justify-center mt-2 pb-0 mb-0"><img src='https://github.com/keerthankacharya/vyaaparhub/blob/main/Images/logo-h.png?raw=true'></img></div>
+        <div className="flex items-center justify-center mt-2 pb-0 mb-0"><img src={Logo}></img></div>
         <div className="relative flex items-top justify-center min-h-[200px] bg-white sm:items-center sm:pb-5">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div className="mt-8 overflow-hidden">

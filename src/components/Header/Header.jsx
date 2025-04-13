@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi"; // Search icon
+import logo from "../../images/logo.png";
 
 export default function Header() {
     const [shopDropdown, setShopDropdown] = useState(false);
@@ -39,7 +40,7 @@ export default function Header() {
                     {/* Logo */}
                     <Link to="/" className="flex items-center">
                         <img
-                            src="https://keerthankacharya.github.io/vyaaparhub/Images/logo.png"
+                            src={logo}
                             className="mr-3 h-12"
                             alt="Logo"
                         />

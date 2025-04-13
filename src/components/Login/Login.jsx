@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
+import Logo from "../../images/logo.png";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const Login = () => {
       <form className="form_container" onSubmit={handleSubmit}>
         <div className="logo_container">
           <img 
-            src="https://github.com/keerthankacharya/vyaaparhub/blob/main/Images/logo-h.png?raw=true" 
+            src={Logo}
             alt="Logo" 
             className="logo"
           />
