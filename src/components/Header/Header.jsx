@@ -2,11 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi"; // Search icon
+import { FiShoppingCart } from "react-icons/fi";
 import logo from "../../images/logo.png";
 
 export default function Header() {
     const [shopDropdown, setShopDropdown] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [cartItems, setCartItems] = useState(0); // This would typically come from your cart context/state
     const dropdownRef = useRef(null);
     let timeoutId = useRef(null);
 
@@ -96,16 +98,21 @@ export default function Header() {
                         <NavLink to="/about" className="nav-link">About</NavLink>
                         <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
                         <Link
+                            to="/cart"
+                            className="relative inline-flex items-center p-2 text-gray-700 hover:text-green-700 transition-colors duration-200"
+                        >
+                            <FiShoppingCart className="w-6 h-6" />
+                            {cartItems > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-green-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                                    {cartItems}
+                                </span>
+                            )}
+                        </Link>
+                        <Link
                             to="/login"
                             className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none"
                         >
                             Log in
-                        </Link>
-                        <Link
-                            to="/"
-                            className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none"
-                        >
-                            My Cart
                         </Link>
                     </div>
                 </div>
@@ -133,10 +140,19 @@ export default function Header() {
                                     </div>
                                 )}
                             </div>
+                            <NavLink to="/about" className="nav-link">About</NavLink>
+                            <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
+                            <Link to="/cart" className="nav-link flex items-center">
+                                <FiShoppingCart className="w-5 h-5 mr-2" />
+                                Cart
+                                {cartItems > 0 && (
+                                    <span className="ml-2 bg-green-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                                        {cartItems}
+                                    </span>
+                                )}
+                            </Link>
+                            <NavLink to="/login" className="nav-link text-white bg-green-700 rounded-lg px-4 py-2">Login</NavLink>
                         </ul>
-                        <NavLink to="/about" className="nav-link">About</NavLink>
-                        <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
-                        <NavLink to="/login" className="nav-link text-white bg-green-700 rounded-lg px-4 py-2">Login</NavLink>
                     </div>
                 )}
             </nav>

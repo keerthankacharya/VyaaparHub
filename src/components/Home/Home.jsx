@@ -1,154 +1,173 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="mx-auto w-full max-w-7xl">
-      
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      {/* Hero Section */}
-<section className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-  <div className="relative z-10 max-w-screen-xl mx-auto px-4 pb-20 pt-10 sm:py-24 sm:px-6 lg:px-8">
-    
-    {/* Flex Container for Side-by-Side Layout */}
-    <div className="flex flex-col sm:flex-row items-center sm:items-start">
-
-      {/* Left Side - Image */}
-      <div className="w-full sm:w-1/2 flex justify-center sm:justify-start">
-        <img
-          className="w-full max-w-md sm:max-w-lg rounded-lg shadow-lg"
-          src="https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt="Trade Platform"
-        />
-      </div>
-
-      {/* Right Side - Text Content */}
-      <div className="w-full sm:w-1/2 text-center sm:text-left mt-10 sm:mt-0">
-        <h2 className="text-4xl font-bold sm:text-5xl">
-          India’s B2B Revolution with <br className="hidden sm:block"/> Technology & Trust
-        </h2>
-        <p className="mt-4 text-lg text-gray-600">
-          Transforming trade for small businesses with transparency & efficiency.
-        </p>
-
-        <Link
-          className="inline-flex items-center px-6 py-3 mt-6 text-white font-medium bg-green-700 rounded-lg hover:opacity-75"
-          to="/login"
-        >
-          Get Started
-        </Link>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-      {/* About Us Section */}
-      <section className="px-4 py-16 bg-white sm:px-6 lg:px-8">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-800">About Vyaapar Hub</h3>
-          <p className="mt-4 text-gray-600">
-            Founded in 2024, Vyaapar Hub is revolutionizing B2B trade in India by bridging the gap between 
-            manufacturers, retailers, and wholesalers. Our mission is to empower small and medium businesses with 
-            technology, transparency, and trust.
-          </p>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="px-4 py-16 bg-gray-100 sm:px-6 lg:px-8">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-800">How It Works</h3>
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            <div className="p-6 bg-white rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">1. Sign Up</h4>
-              <p className="mt-2 text-gray-600">Create an account in minutes and get started.</p>
+      <section className="relative bg-gradient-to-r from-green-600 to-green-800 text-white">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="lg:w-1/2 mb-10 lg:mb-0">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Transform Your Business with India's Leading B2B Platform
+              </h1>
+              <p className="mt-6 text-xl text-gray-100">
+                Connect with thousands of verified suppliers and buyers. Grow your business with our secure and efficient trading platform.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/register"
+                  className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green-700 bg-white hover:bg-gray-50 transition duration-150"
+                >
+                  Start Selling
+                </Link>
+                <Link
+                  to="/browse"
+                  className="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-green-700 transition duration-150"
+                >
+                  Browse Products
+                </Link>
+              </div>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">2. Browse & Order</h4>
-              <p className="mt-2 text-gray-600">Explore a wide range of products and place orders easily.</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">3. Secure Payments</h4>
-              <p className="mt-2 text-gray-600">Enjoy 100% secure transactions with full transparency.</p>
+            <div className="lg:w-1/2">
+              <img
+                src="https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg"
+                alt="B2B Platform"
+                className="rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Popular Categories Section */}
-      <section className="px-4 py-16 bg-white sm:px-6 lg:px-8">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-800">Popular Categories</h3>
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">Electronics</h4>
-              <p className="mt-2 text-gray-600">Mobile accessories, gadgets, and more.</p>
-            </div>
-            <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">Groceries</h4>
-              <p className="mt-2 text-gray-600">Wholesale groceries at best prices.</p>
-            </div>
-            <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">Clothing</h4>
-              <p className="mt-2 text-gray-600">Fashion and textiles for retailers.</p>
-            </div>
+      {/* Featured Categories */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Popular Categories</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { name: 'Fruits & Vegetables', icon: '🥬', count: '1.2k+ Products', link: '/fruitsVegetables' },
+              { name: 'Diary & Bread', icon: '🥖', count: '2.5k+ Products', link: '/dairyBread' },
+              { name: 'Provisonal Items', icon: '🛒', count: '800+ Products', link: '/provisionalItems' },
+              { name: 'Home Essentials', icon: '🏠', count: '1.5k+ Products', link: '/homeEssentials' },
+            ].map((category) => (
+              <div key={category.name} className="group relative bg-gray-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                <div className="text-4xl mb-4">{category.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900">{category.name}</h3>
+                <p className="text-sm text-gray-500">{category.count}</p>
+                <Link to={category.link} className="absolute inset-0"></Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="px-4 py-16 bg-gray-100 sm:px-6 lg:px-8">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-800">What Our Users Say</h3>
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            <div className="p-6 bg-white rounded-lg shadow-lg">
-              <p className="italic">"Vyaapar Hub has transformed the way I do business!"</p>
-              <h4 className="mt-2 font-semibold">- Rajesh, Retailer</h4>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-lg">
-              <p className="italic">"I expanded my business beyond my local market!"</p>
-              <h4 className="mt-2 font-semibold">- Priya, Manufacturer</h4>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-lg">
-              <p className="italic">"Secure payments make this platform a game changer!"</p>
-              <h4 className="mt-2 font-semibold">- Amit, Wholesaler</h4>
-            </div>
+      {/* Featured Products */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Featured Products</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[1, 2, 3, 4].map((product) => (
+              <div key={product} className="bg-white rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-t-xl">
+                  <img
+                    src={`https://source.unsplash.com/random/400x400?product=${product}`}
+                    alt="Product"
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900">Premium Product {product}</h3>
+                  <p className="mt-1 text-sm text-gray-500">Starting from ₹999</p>
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-green-600 font-semibold">Min. Order: 10</span>
+                    <button className="text-green-600 hover:text-green-700 font-medium">
+                      View Details →
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Latest News Section */}
-      <section className="px-4 py-16 bg-white sm:px-6 lg:px-8">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-800">Latest News & Updates</h3>
-          <p className="mt-4 text-gray-600">Stay informed with the latest trends and insights in B2B trade.</p>
-          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">E-commerce Growth</h4>
-              <p className="mt-2 text-gray-600">How digital trade is reshaping B2B in India.</p>
-            </div>
-            <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-700">Small Business Trends</h4>
-              <p className="mt-2 text-gray-600">Top trends shaping SMEs in 2025.</p>
-            </div>
+      {/* Why Choose Us */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Why Choose Vyaapar Hub</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Verified Suppliers',
+                description: 'All our suppliers are thoroughly verified for quality and reliability.',
+                icon: '✓'
+              },
+              {
+                title: 'Secure Payments',
+                description: 'Multiple payment options with 100% secure transactions.',
+                icon: '🔒'
+              },
+              {
+                title: '24/7 Support',
+                description: 'Round-the-clock customer support for all your queries.',
+                icon: '💬'
+              }
+            ].map((feature) => (
+              <div key={feature.title} className="text-center p-6">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="px-4 py-16 bg-gray-100 sm:px-6 lg:px-8">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-800">Frequently Asked Questions</h3>
-          <div className="mt-6 text-left max-w-3xl mx-auto">
-            <h4 className="text-lg font-semibold">How do I register?</h4>
-            <p className="text-gray-600">Simply click on ‘Get Started’ and sign up in a few easy steps.</p>
-            <h4 className="text-lg font-semibold mt-4">Is payment secure?</h4>
-            <p className="text-gray-600">Yes, all payments are processed with 100% security.</p>
+      {/* Stats Section */}
+      <section className="py-16 bg-green-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: '10,000+', label: 'Active Suppliers' },
+              { number: '50,000+', label: 'Products' },
+              { number: '1M+', label: 'Monthly Orders' },
+              { number: '98%', label: 'Satisfaction Rate' }
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div className="text-4xl font-bold mb-2">{stat.number}</div>
+                <div className="text-green-100">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Grow Your Business?</h2>
+          <p className="text-xl text-gray-600 mb-8">Join thousands of successful businesses on Vyaapar Hub</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/register"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition duration-150"
+            >
+              Register Now
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 border border-green-600 text-base font-medium rounded-md text-green-600 bg-white hover:bg-gray-50 transition duration-150"
+            >
+              Contact Sales
+            </Link>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Home;
